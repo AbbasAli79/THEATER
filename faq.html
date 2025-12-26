@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THEATER | Frequently Asked Questions</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body class="body3">
+
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a href="#" class="logo">
+                    </i>TH<span class="main-color">EAT</span>ER
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#second">POPULAR</a></li>
+                    <li><a href="#movies">Movies</a></li>
+                    <li><a href="#series">Series</a></li>
+                    <li><a href="#cartoons">CARTOONS</a></li>
+                    <li><a href="faq.html">Faq</a></li>
+                    <li>
+                        <a href="signin.html" class="btn btn-hover">
+                            <span>Sign in</span>
+                        </a>
+                    </li>
+                </ul>
+
+
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <div class="hamburger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="faq-section">
+        <h1 class="title"><span class="main-color">FREQUENTLY</span> ASKED QUESTIONS</h1>
+        <ul class="faq">
+            <li>
+                <div class="q">
+                    <span class="arrow"></span>
+                    <span>New Movie Release Date</span>
+                </div>
+                <div class="a">
+                    <p>It Will Take Time Upto 1 Week!.</p>
+                </div>
+            </li>
+            <li>
+                <div class="q">
+                    <span class="arrow"></span>
+                    <span>How does the booking system work?</span>
+                </div>
+                <div class="a">
+                    <p>You can book your tickets online through our website.</p>
+                </div>
+            </li>
+            <li>
+                <div class="q">
+                    <span class="arrow"></span>
+                    <span>Can I cancel my ticket?</span>
+                </div>
+                <div class="a">
+                    <p>Yes, tickets can be canceled 24 hours before the show.</p>
+                </div>
+            </li>
+            <li>
+                <div class="q">
+                    <span class="arrow"></span>
+                    <span>What payment methods do you accept?</span>
+                </div>
+                <div class="a">
+                    <p>We accept credit cards, debit cards, and PayPal.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+    <script>
+        var questions = document.querySelectorAll('.q');
+
+        questions.forEach((question, index) => {
+            question.addEventListener('click', () => {
+                var answer = question.nextElementSibling;
+                var arrow = question.querySelector('.arrow');
+
+                answer.classList.toggle('a-opened');
+                arrow.classList.toggle('arrow-rotated');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
